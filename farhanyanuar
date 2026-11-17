@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhan Yanuar | Data Analyst</title>
+<meta name="description" content="Farhan Yanuar's professional portfolio in mathematics, data analytics and business intelligence.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #101010;
+  --text: #f1eee8;
+  --muted: #aaa7a1;
+  --accent: #a69afa;
+  --line: #292929;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+.container { width: 88%; max-width: 1100px; margin: auto; }
+header {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(16,16,16,.94);
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+nav { display:flex; justify-content:space-between; align-items:center; }
+.logo { font-size: 22px; font-weight:700; }
+nav a {
+  color: var(--muted);
+  text-decoration:none;
+  margin-left:24px;
+  font-size:13px;
+}
+nav a:hover { color:var(--accent); }
+.hero { padding:100px 0 90px; position:relative; overflow:hidden; }
+.eyebrow {
+  color:var(--muted);
+  letter-spacing:5px;
+  font-size:12px;
+  margin-bottom:35px;
+}
+.intro { color:var(--muted); max-width:600px; font-size:17px; }
+h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,8vw,90px);
+  line-height:1.12;
+  margin:35px 0;
+  letter-spacing:-3px;
+}
+h1 em { color:var(--accent); }
+.description {
+  max-width:700px;
+  color:#c5c1ba;
+  font-size:17px;
+  line-height:2;
+}
+.buttons { display:flex; gap:15px; flex-wrap:wrap; margin-top:40px; }
+.btn {
+  display:inline-block;
+  text-decoration:none;
+  padding:13px 27px;
+  border:1px solid #555;
+  border-radius:40px;
+  color:var(--text);
+  font-size:14px;
+  transition:.3s;
+}
+.btn.primary { background:var(--text); color:#111; border-color:var(--text); }
+.btn:hover { transform:translateY(-3px); border-color:var(--accent); }
+.info {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  border-top:1px solid var(--line);
+  margin-top:90px;
+  padding-top:30px;
+}
+.info small { color:var(--muted); letter-spacing:3px; font-size:11px; }
+.info p { margin-top:8px; }
+section { padding:80px 0; border-top:1px solid var(--line); }
+.section-label {
+  color:var(--accent);
+  letter-spacing:4px;
+  font-size:11px;
+  margin-bottom:15px;
+}
+h2 {
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  margin-bottom:35px;
+}
+.about-text { color:#c5c1ba; max-width:750px; font-size:16px; }
+.skills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.skill {
+  border:1px solid #393939;
+  padding:9px 17px;
+  border-radius:30px;
+  color:#d0ccc5;
+  font-size:13px;
+}
+.projects {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.project {
+  border:1px solid var(--line);
+  padding:28px;
+  border-radius:8px;
+  transition:.3s;
+}
+.project:hover { border-color:var(--accent); transform:translateY(-4px); }
+.project-number { color:var(--accent); font-size:12px; letter-spacing:3px; }
+.project h3 { font-size:21px; margin:20px 0 10px; }
+.project p { color:var(--muted); font-size:14px; }
+.project span { display:block; color:var(--accent); font-size:12px; margin-top:20px; }
+.experience {
+  border-left:1px solid #555;
+  padding:0 0 35px 25px;
+  margin-left:5px;
+}
+.experience h3 { font-size:19px; }
+.experience small { color:var(--accent); }
+.experience p { color:var(--muted); font-size:14px; margin-top:8px; }
+.contact-box {
+  border:1px solid #393939;
+  padding:40px;
+  border-radius:10px;
+}
+.contact-box p { color:var(--muted); margin-bottom:25px; }
+footer {
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:12px;
+  text-align:center;
+}
+@media(max-width:650px) {
+  .container { width:88%; }
+  .hero { padding:75px 0 60px; }
+  nav a { margin-left:10px; font-size:11px; }
+  .info { grid-template-columns:1fr 1fr; margin-top:60px; }
+  .projects { grid-template-columns:1fr; }
+  h2 { font-size:34px; }
+  .contact-box { padding:25px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo">FY.</div>
+<div>
+<a href="#about">ABOUT</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container">
+<div class="hero">
+<p class="eyebrow">● PORTFOLIO — 2026</p>
+
+<p class="intro">Hi, I'm Farhan Yanuar, a Mathematics Graduate with an analytical mindset.</p>
+
+<h1>I turn raw data<br>into <em>insights.</em></h1>
+
+<p class="description">
+Mathematics graduate from Universitas Jenderal Soedirman, interested in data analytics, business intelligence, and data visualization. Passionate about transforming numbers into meaningful insights that support better decisions.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn primary">Get in touch ↗</a>
+<a href="#projects" class="btn">Explore my work ↓</a>
+</div>
+
+<div class="info">
+<div>
+<small>BASED IN</small>
+<p>Indonesia</p>
+</div>
+<div>
+<small>EDUCATION</small>
+<p>S.Mat. Mathematics</p>
+</div>
+<div>
+<small>FOCUS</small>
+<p>Data Analytics</p>
+</div>
+</div>
+</div>
+
+<section id="about">
+<p class="section-label">01 — ABOUT ME</p>
+<h2>Numbers tell stories.</h2>
+<p class="about-text">
+I am a Mathematics graduate from Universitas Jenderal Soedirman with a strong foundation in analytical thinking, quantitative methods, and problem-solving. My interests include exploring datasets, identifying patterns, and presenting information through clear visualizations. I enjoy connecting mathematical perspectives with practical business problems.
+</p>
+
+<div class="skills">
+<div class="skill">Microsoft Excel</div>
+<div class="skill">Data Analysis</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Statistics</div>
+<div class="skill">Mathematical Modeling</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Business Intelligence</div>
+</div>
+</section>
+
+<section id="projects">
+<p class="section-label">02 — SELECTED WORK</p>
+<h2>Projects & Research.</h2>
+
+<div class="projects">
+<div class="project">
+<p class="project-number">PROJECT 01</p>
+<h3>Operational Optimization</h3>
+<p>Research on optimizing an online student transportation service using Multi-Objective Decision Making and Goal Programming.</p>
+<span>MATHEMATICAL MODELING · GOAL PROGRAMMING</span>
+</div>
+
+<div class="project">
+<p class="project-number">PROJECT 02</p>
+<h3>Data Visualization</h3>
+<p>Data visualization contribution published in Depok Dalam Angka 2025, presenting statistical information in a clear and informative format.</p>
+<span>DATA VISUALIZATION · STATISTICS</span>
+</div>
+
+<div class="project">
+<p class="project-number">PROJECT 03</p>
+<h3>Sales Data Analysis</h3>
+<p>A developing personal project exploring sales performance, revenue, costs, and business insights from an ice dessert business.</p>
+<span>BUSINESS ANALYTICS · EXCEL</span>
+</div>
+
+<div class="project">
+<p class="project-number">PROJECT 04</p>
+<h3>Business Intelligence</h3>
+<p>Developing analytical skills to transform business data into meaningful information for performance monitoring and decision-making.</p>
+<span>DATA ANALYTICS · BUSINESS INTELLIGENCE</span>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<p class="section-label">03 — EXPERIENCE</p>
+<h2>What I've done.</h2>
+
+<div class="experience">
+<small>EDUCATION</small>
+<h3>Universitas Jenderal Soedirman</h3>
+<p>Bachelor's Degree in Mathematics — S.Mat.</p>
+</div>
+
+<div class="experience">
+<small>TEACHING EXPERIENCE</small>
+<h3>Mathematics Educator</h3>
+<p>Teaching and supporting the learning process of more than 500 students through structured and analytical learning approaches.</p>
+</div>
+
+<div class="experience">
+<small>ORGANIZATIONAL EXPERIENCE</small>
+<h3>Operational Management — Ojek Soedirman</h3>
+<p>Contributing to operational coordination and service management in a student transportation service.</p>
+</div>
+</section>
+
+<section id="contact">
+<p class="section-label">04 — GET IN TOUCH</p>
+<h2>Let's work together.</h2>
+<div class="contact-box">
+<p>I'm open to opportunities, collaborations, and conversations about data analytics and business intelligence.</p>
+<a class="btn primary" href="mailto:YOUR_EMAIL@gmail.com">Email Me ↗</a>
+<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+</div>
+</section>
+</div>
+</main>
+
+<footer>
+<div class="container">
+© 2026 Farhan Yanuar. Designed with purpose.
+</div>
+</footer>
+
+</body>
+</html>
