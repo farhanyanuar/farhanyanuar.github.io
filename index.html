@@ -1,177 +1,294 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Farhan Yanuar | Data Analyst</title>
-<meta name="description" content="Farhan Yanuar's professional portfolio in mathematics, data analytics and business intelligence.">
+<title>Farhan Yanuar | Data Analyst Portfolio</title>
+<meta name="description" content="Farhan Yanuar - Mathematics Graduate and aspiring Data Analyst.">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #101010;
-  --text: #f1eee8;
-  --muted: #aaa7a1;
-  --accent: #a69afa;
-  --line: #292929;
+  --bg:#0b1120;
+  --panel:#131e32;
+  --panel2:#192740;
+  --blue:#668cff;
+  --cyan:#61d6e8;
+  --white:#f3f6fc;
+  --muted:#98a7bd;
+  --border:#263650;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  line-height: 1.7;
+  background:var(--bg);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.6;
 }
-.container { width: 88%; max-width: 1100px; margin: auto; }
+a {text-decoration:none;color:inherit}
+.container {width:90%;max-width:1150px;margin:auto}
+
+/* NAVIGATION */
 header {
-  padding: 25px 0;
-  border-bottom: 1px solid var(--line);
-  position: sticky;
-  top: 0;
-  background: rgba(16,16,16,.94);
-  z-index: 10;
-  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--border);
+  background:#0b1120;
+  position:sticky;top:0;z-index:10;
 }
-nav { display:flex; justify-content:space-between; align-items:center; }
-.logo { font-size: 22px; font-weight:700; }
-nav a {
-  color: var(--muted);
-  text-decoration:none;
-  margin-left:24px;
-  font-size:13px;
-}
-nav a:hover { color:var(--accent); }
-.hero { padding:100px 0 90px; position:relative; overflow:hidden; }
-.eyebrow {
-  color:var(--muted);
-  letter-spacing:5px;
-  font-size:12px;
-  margin-bottom:35px;
-}
-.intro { color:var(--muted); max-width:600px; font-size:17px; }
-h1 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(48px,8vw,90px);
-  line-height:1.12;
-  margin:35px 0;
-  letter-spacing:-3px;
-}
-h1 em { color:var(--accent); }
-.description {
-  max-width:700px;
-  color:#c5c1ba;
-  font-size:17px;
-  line-height:2;
-}
-.buttons { display:flex; gap:15px; flex-wrap:wrap; margin-top:40px; }
-.btn {
-  display:inline-block;
-  text-decoration:none;
-  padding:13px 27px;
-  border:1px solid #555;
-  border-radius:40px;
-  color:var(--text);
-  font-size:14px;
-  transition:.3s;
-}
-.btn.primary { background:var(--text); color:#111; border-color:var(--text); }
-.btn:hover { transform:translateY(-3px); border-color:var(--accent); }
-.info {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  border-top:1px solid var(--line);
-  margin-top:90px;
-  padding-top:30px;
-}
-.info small { color:var(--muted); letter-spacing:3px; font-size:11px; }
-.info p { margin-top:8px; }
-section { padding:80px 0; border-top:1px solid var(--line); }
-.section-label {
-  color:var(--accent);
-  letter-spacing:4px;
-  font-size:11px;
-  margin-bottom:15px;
-}
-h2 {
-  font-family:'Playfair Display',serif;
-  font-size:42px;
-  margin-bottom:35px;
-}
-.about-text { color:#c5c1ba; max-width:750px; font-size:16px; }
-.skills {
+nav {
+  min-height:75px;
   display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
+  align-items:center;
+  justify-content:space-between;
 }
-.skill {
-  border:1px solid #393939;
-  padding:9px 17px;
+.logo {font-size:21px;font-weight:800;letter-spacing:1px}
+.logo span {color:var(--blue)}
+.nav-links {display:flex;gap:27px}
+.nav-links a {font-size:13px;color:var(--muted)}
+.nav-links a:hover {color:var(--cyan)}
+
+/* HERO */
+.hero {padding:75px 0 55px}
+.status {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#a5e5ca;
+  background:#142d2b;
+  border:1px solid #245448;
   border-radius:30px;
-  color:#d0ccc5;
-  font-size:13px;
+  padding:7px 13px;
+  font-size:11px;
+  margin-bottom:25px;
 }
-.projects {
+.dot {width:7px;height:7px;border-radius:50%;background:#52d49a}
+.hero-grid {
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
+  grid-template-columns:1.5fr .8fr;
+  gap:35px;
+  align-items:center;
 }
-.project {
-  border:1px solid var(--line);
-  padding:28px;
-  border-radius:8px;
-  transition:.3s;
-}
-.project:hover { border-color:var(--accent); transform:translateY(-4px); }
-.project-number { color:var(--accent); font-size:12px; letter-spacing:3px; }
-.project h3 { font-size:21px; margin:20px 0 10px; }
-.project p { color:var(--muted); font-size:14px; }
-.project span { display:block; color:var(--accent); font-size:12px; margin-top:20px; }
-.experience {
-  border-left:1px solid #555;
-  padding:0 0 35px 25px;
-  margin-left:5px;
-}
-.experience h3 { font-size:19px; }
-.experience small { color:var(--accent); }
-.experience p { color:var(--muted); font-size:14px; margin-top:8px; }
-.contact-box {
-  border:1px solid #393939;
-  padding:40px;
-  border-radius:10px;
-}
-.contact-box p { color:var(--muted); margin-bottom:25px; }
-footer {
-  padding:30px 0;
-  border-top:1px solid var(--line);
-  color:var(--muted);
+.eyebrow {
+  color:var(--cyan);
   font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+h1 {
+  font-size:clamp(38px,6vw,66px);
+  line-height:1.12;
+  letter-spacing:-2px;
+  margin:15px 0 20px;
+}
+h1 span {color:var(--blue)}
+.hero-text {color:var(--muted);max-width:650px;font-size:15px}
+.actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn {
+  padding:11px 19px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:600;
+  display:inline-block;
+  transition:.2s;
+}
+.btn-blue {background:var(--blue);color:white}
+.btn-outline {border:1px solid var(--border);color:var(--white)}
+.btn:hover {transform:translateY(-3px);opacity:.9}
+
+.profile-card {
+  background:linear-gradient(145deg,#1a2c4b,#121d31);
+  border:1px solid #304565;
+  border-radius:14px;
+  padding:25px;
   text-align:center;
 }
-@media(max-width:650px) {
-  .container { width:88%; }
-  .hero { padding:75px 0 60px; }
-  nav a { margin-left:10px; font-size:11px; }
-  .info { grid-template-columns:1fr 1fr; margin-top:60px; }
-  .projects { grid-template-columns:1fr; }
-  h2 { font-size:34px; }
-  .contact-box { padding:25px; }
+.avatar {
+  width:85px;height:85px;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+  border-radius:22px;
+  background:#263c65;
+  color:#9fb7ff;
+  font-size:30px;font-weight:800;
+}
+.profile-card h3 {font-size:18px}
+.profile-card p {color:var(--muted);font-size:12px;margin-top:5px}
+.profile-details {
+  margin-top:20px;
+  padding-top:17px;
+  border-top:1px solid var(--border);
+  text-align:left;
+  font-size:12px;
+}
+.profile-details div {display:flex;justify-content:space-between;gap:10px;margin:9px 0}
+.profile-details span:first-child {color:var(--muted)}
+.profile-details span:last-child {text-align:right}
+
+/* STATS */
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:25px 0 75px;
+}
+.stat {
+  padding:22px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+}
+.stat strong {font-size:29px;color:var(--cyan);display:block}
+.stat p {font-size:12px;color:var(--muted);margin-top:4px}
+
+/* SECTIONS */
+section {padding:65px 0;border-top:1px solid var(--border)}
+.section-head {margin-bottom:30px}
+.section-head small {color:var(--cyan);letter-spacing:2px;font-size:11px;font-weight:700}
+.section-head h2 {font-size:30px;margin-top:7px}
+.section-head p {color:var(--muted);font-size:13px;margin-top:6px}
+
+/* ABOUT */
+.about-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:20px;
+}
+.panel {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:11px;
+  padding:25px;
+}
+.panel p {font-size:14px;color:var(--muted)}
+.panel h3 {font-size:17px;margin-bottom:12px}
+.focus-item {
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;gap:12px;
+  font-size:13px;
+}
+.focus-item:last-child {border:0}
+.focus-item span:last-child {color:var(--cyan)}
+
+/* SKILLS */
+.skill-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.skill-card {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:20px;
+}
+.skill-card .symbol {font-size:22px;color:var(--cyan)}
+.skill-card h3 {font-size:15px;margin:10px 0 5px}
+.skill-card p {font-size:12px;color:var(--muted)}
+
+/* PROJECTS */
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:17px;
+}
+.project {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:11px;
+  overflow:hidden;
+  transition:.25s;
+}
+.project:hover {border-color:var(--blue);transform:translateY(-4px)}
+.project-top {
+  height:105px;
+  background:linear-gradient(120deg,#1c3760,#263c70,#164d61);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+}
+.project-body {padding:21px}
+.project-body small {color:var(--cyan);font-size:10px;letter-spacing:1px}
+.project-body h3 {font-size:18px;margin:8px 0}
+.project-body p {font-size:12px;color:var(--muted)}
+.tags {display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}
+.tag {
+  background:var(--panel2);
+  color:#b6c7e2;
+  border-radius:4px;
+  padding:5px 9px;
+  font-size:10px;
+}
+
+/* EXPERIENCE */
+.timeline {border-left:2px solid #304565;margin-left:8px;padding-left:25px}
+.timeline-item {position:relative;margin-bottom:30px}
+.timeline-item:before {
+  content:"";
+  position:absolute;left:-32px;top:7px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--blue);
+}
+.timeline-item small {color:var(--cyan);font-size:11px}
+.timeline-item h3 {font-size:17px;margin:5px 0}
+.timeline-item p {font-size:13px;color:var(--muted)}
+
+/* CONTACT */
+.contact {
+  background:linear-gradient(120deg,#17294a,#14253b);
+  border:1px solid #304565;
+  border-radius:13px;
+  padding:35px;
+}
+.contact h2 {font-size:28px;margin-bottom:10px}
+.contact p {font-size:13px;color:var(--muted);margin-bottom:22px}
+
+footer {
+  padding:28px 0;
+  text-align:center;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:11px;
+}
+
+@media(max-width:700px) {
+  .container {width:90%}
+  nav {min-height:65px}
+  .nav-links {gap:12px}
+  .nav-links a {font-size:10px}
+  .hero {padding-top:48px}
+  .hero-grid,.about-grid {grid-template-columns:1fr}
+  .profile-card {max-width:400px}
+  .stats {gap:8px;margin-bottom:55px}
+  .stat {padding:13px}
+  .stat strong {font-size:22px}
+  .stat p {font-size:10px}
+  .skill-grid {grid-template-columns:repeat(2,1fr)}
+  .project-grid {grid-template-columns:1fr}
+  section {padding:50px 0}
+  .section-head h2 {font-size:26px}
+}
+@media(max-width:370px) {
+  .nav-links {gap:7px}
+  .nav-links a {font-size:9px}
 }
 </style>
 </head>
 
 <body>
+
 <header>
 <div class="container">
 <nav>
-<div class="logo">FY.</div>
-<div>
-<a href="#about">ABOUT</a>
-<a href="#projects">PROJECTS</a>
-<a href="#contact">CONTACT</a>
+<a href="#" class="logo">FARHAN<span>.</span></a>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 </div>
@@ -179,129 +296,229 @@ footer {
 
 <main>
 <div class="container">
+
 <div class="hero">
-<p class="eyebrow">● PORTFOLIO — 2026</p>
+<div class="status"><span class="dot"></span> OPEN TO PROFESSIONAL OPPORTUNITIES</div>
 
-<p class="intro">Hi, I'm Farhan Yanuar, a Mathematics Graduate with an analytical mindset.</p>
-
-<h1>I turn raw data<br>into <em>insights.</em></h1>
-
-<p class="description">
-Mathematics graduate from Universitas Jenderal Soedirman, interested in data analytics, business intelligence, and data visualization. Passionate about transforming numbers into meaningful insights that support better decisions.
+<div class="hero-grid">
+<div>
+<p class="eyebrow">MATHEMATICS GRADUATE · DATA ANALYTICS</p>
+<h1>Turning Data<br>Into <span>Business Value.</span></h1>
+<p class="hero-text">
+Hello, I'm Farhan Yanuar. A Mathematics graduate from Universitas Jenderal Soedirman with an interest in data analytics, business intelligence, and quantitative problem-solving. I enjoy transforming information into insights that support better decisions.
 </p>
-
-<div class="buttons">
-<a href="#contact" class="btn primary">Get in touch ↗</a>
-<a href="#projects" class="btn">Explore my work ↓</a>
+<div class="actions">
+<a href="#projects" class="btn btn-blue">Explore Projects ↗</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
+</div>
 </div>
 
-<div class="info">
-<div>
-<small>BASED IN</small>
-<p>Indonesia</p>
+<div class="profile-card">
+<div class="avatar">FY</div>
+<h3>Farhan Yanuar</h3>
+<p>Mathematics Graduate</p>
+<div class="profile-details">
+<div><span>Education</span><span>S.Mat.</span></div>
+<div><span>University</span><span>UNSOED</span></div>
+<div><span>Interest</span><span>Data Analytics</span></div>
+<div><span>Location</span><span>Indonesia</span></div>
 </div>
-<div>
-<small>EDUCATION</small>
-<p>S.Mat. Mathematics</p>
 </div>
-<div>
-<small>FOCUS</small>
-<p>Data Analytics</p>
 </div>
+</div>
+
+<div class="stats">
+<div class="stat">
+<strong>500+</strong>
+<p>Students taught</p>
+</div>
+<div class="stat">
+<strong>2025</strong>
+<p>Data publication contribution</p>
+</div>
+<div class="stat">
+<strong>S.Mat.</strong>
+<p>Mathematics graduate</p>
 </div>
 </div>
 
 <section id="about">
-<p class="section-label">01 — ABOUT ME</p>
-<h2>Numbers tell stories.</h2>
-<p class="about-text">
-I am a Mathematics graduate from Universitas Jenderal Soedirman with a strong foundation in analytical thinking, quantitative methods, and problem-solving. My interests include exploring datasets, identifying patterns, and presenting information through clear visualizations. I enjoy connecting mathematical perspectives with practical business problems.
-</p>
+<div class="section-head">
+<small>01 / PROFILE</small>
+<h2>About Me</h2>
+<p>Mathematical thinking. Practical problem-solving.</p>
+</div>
 
-<div class="skills">
-<div class="skill">Microsoft Excel</div>
-<div class="skill">Data Analysis</div>
-<div class="skill">Data Visualization</div>
-<div class="skill">Statistics</div>
-<div class="skill">Mathematical Modeling</div>
-<div class="skill">Problem Solving</div>
-<div class="skill">Business Intelligence</div>
+<div class="about-grid">
+<div class="panel">
+<h3>My Background</h3>
+<p>
+I graduated in Mathematics from Universitas Jenderal Soedirman. My academic background has developed my ability to think analytically, interpret quantitative information, and approach complex problems systematically.
+<br><br>
+Beyond academics, I have experience in teaching, operational coordination, and data visualization. I am interested in applying these experiences to business analytics and data-driven decision-making.
+</p>
+</div>
+<div class="panel">
+<h3>Professional Interests</h3>
+<div class="focus-item"><span>Data Analytics</span><span>01</span></div>
+<div class="focus-item"><span>Business Intelligence</span><span>02</span></div>
+<div class="focus-item"><span>Data Visualization</span><span>03</span></div>
+<div class="focus-item"><span>Operations Analysis</span><span>04</span></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head">
+<small>02 / CAPABILITIES</small>
+<h2>Skills & Expertise</h2>
+<p>Areas I have studied, practiced, and continue to develop.</p>
+</div>
+
+<div class="skill-grid">
+<div class="skill-card">
+<div class="symbol">▦</div>
+<h3>Microsoft Excel</h3>
+<p>Spreadsheet management, formulas, data organization, and analysis.</p>
+</div>
+<div class="skill-card">
+<div class="symbol">◫</div>
+<h3>Data Visualization</h3>
+<p>Presenting statistical information through clear visual formats.</p>
+</div>
+<div class="skill-card">
+<div class="symbol">∑</div>
+<h3>Statistics</h3>
+<p>Quantitative thinking, statistical interpretation, and analysis.</p>
+</div>
+<div class="skill-card">
+<div class="symbol">⌘</div>
+<h3>Mathematical Modeling</h3>
+<p>Formulating quantitative models for operational problems.</p>
+</div>
+<div class="skill-card">
+<div class="symbol">◈</div>
+<h3>Business Analysis</h3>
+<p>Understanding business processes, performance, and operations.</p>
+</div>
+<div class="skill-card">
+<div class="symbol">↗</div>
+<h3>Problem Solving</h3>
+<p>Structured reasoning and evidence-based decision-making.</p>
+</div>
 </div>
 </section>
 
 <section id="projects">
-<p class="section-label">02 — SELECTED WORK</p>
-<h2>Projects & Research.</h2>
+<div class="section-head">
+<small>03 / PORTFOLIO</small>
+<h2>Selected Projects</h2>
+<p>Research, practical analysis, and data-related work.</p>
+</div>
 
-<div class="projects">
+<div class="project-grid">
+
 <div class="project">
-<p class="project-number">PROJECT 01</p>
-<h3>Operational Optimization</h3>
-<p>Research on optimizing an online student transportation service using Multi-Objective Decision Making and Goal Programming.</p>
-<span>MATHEMATICAL MODELING · GOAL PROGRAMMING</span>
+<div class="project-top">▥</div>
+<div class="project-body">
+<small>RESEARCH · MATHEMATICS</small>
+<h3>Multi-Objective Optimization</h3>
+<p>Research on optimizing an online student transportation service using Goal Programming, considering operational constraints and conflicting objectives.</p>
+<div class="tags">
+<span class="tag">Goal Programming</span>
+<span class="tag">Optimization</span>
+<span class="tag">MODM</span>
+</div>
+</div>
 </div>
 
 <div class="project">
-<p class="project-number">PROJECT 02</p>
-<h3>Data Visualization</h3>
-<p>Data visualization contribution published in Depok Dalam Angka 2025, presenting statistical information in a clear and informative format.</p>
-<span>DATA VISUALIZATION · STATISTICS</span>
+<div class="project-top">◫</div>
+<div class="project-body">
+<small>DATA VISUALIZATION · PUBLICATION</small>
+<h3>Depok Dalam Angka 2025</h3>
+<p>Contributed to data visualization published in Depok Dalam Angka 2025, helping communicate statistical information clearly.</p>
+<div class="tags">
+<span class="tag">Statistics</span>
+<span class="tag">Visualization</span>
+<span class="tag">BPS</span>
+</div>
+</div>
 </div>
 
 <div class="project">
-<p class="project-number">PROJECT 03</p>
-<h3>Sales Data Analysis</h3>
-<p>A developing personal project exploring sales performance, revenue, costs, and business insights from an ice dessert business.</p>
-<span>BUSINESS ANALYTICS · EXCEL</span>
+<div class="project-top">▤</div>
+<div class="project-body">
+<small>PERSONAL PROJECT · IN DEVELOPMENT</small>
+<h3>Es Podeng Sales Analysis</h3>
+<p>A developing analytics project to organize sales and cost records, explore business performance, and identify opportunities for improvement.</p>
+<div class="tags">
+<span class="tag">Excel</span>
+<span class="tag">Sales Analysis</span>
+<span class="tag">Business</span>
+</div>
+</div>
 </div>
 
 <div class="project">
-<p class="project-number">PROJECT 04</p>
-<h3>Business Intelligence</h3>
-<p>Developing analytical skills to transform business data into meaningful information for performance monitoring and decision-making.</p>
-<span>DATA ANALYTICS · BUSINESS INTELLIGENCE</span>
+<div class="project-top">⌁</div>
+<div class="project-body">
+<small>OPERATIONS · SERVICE MANAGEMENT</small>
+<h3>Ojek Soedirman</h3>
+<p>Operational management experience in a campus-based online transportation service, involving service coordination and operational activities.</p>
+<div class="tags">
+<span class="tag">Operations</span>
+<span class="tag">Management</span>
+<span class="tag">Coordination</span>
 </div>
+</div>
+</div>
+
 </div>
 </section>
 
 <section id="experience">
-<p class="section-label">03 — EXPERIENCE</p>
-<h2>What I've done.</h2>
+<div class="section-head">
+<small>04 / JOURNEY</small>
+<h2>Experience & Education</h2>
+<p>My academic and professional journey.</p>
+</div>
 
-<div class="experience">
+<div class="timeline">
+<div class="timeline-item">
 <small>EDUCATION</small>
 <h3>Universitas Jenderal Soedirman</h3>
-<p>Bachelor's Degree in Mathematics — S.Mat.</p>
+<p>Bachelor of Mathematics — S.Mat.</p>
 </div>
-
-<div class="experience">
+<div class="timeline-item">
 <small>TEACHING EXPERIENCE</small>
 <h3>Mathematics Educator</h3>
-<p>Teaching and supporting the learning process of more than 500 students through structured and analytical learning approaches.</p>
+<p>Supported the learning process of more than 500 students through mathematics teaching and structured problem-solving.</p>
 </div>
-
-<div class="experience">
-<small>ORGANIZATIONAL EXPERIENCE</small>
-<h3>Operational Management — Ojek Soedirman</h3>
-<p>Contributing to operational coordination and service management in a student transportation service.</p>
+<div class="timeline-item">
+<small>OPERATIONAL MANAGEMENT</small>
+<h3>Ojek Soedirman</h3>
+<p>Contributed to operational coordination and service management in a campus-based online transportation service.</p>
+</div>
 </div>
 </section>
 
 <section id="contact">
-<p class="section-label">04 — GET IN TOUCH</p>
-<h2>Let's work together.</h2>
-<div class="contact-box">
-<p>I'm open to opportunities, collaborations, and conversations about data analytics and business intelligence.</p>
-<a class="btn primary" href="mailto:YOUR_EMAIL@gmail.com">Email Me ↗</a>
-<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+<div class="contact">
+<p class="eyebrow">LET'S CONNECT</p>
+<h2>Have a project or opportunity in mind?</h2>
+<p>I'm open to professional opportunities, collaborations, and conversations about data analytics and business intelligence.</p>
+<a href="mailto:farhanyanuar01@gmail.com" class="btn btn-blue">Email Me ↗</a>
+<a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
 </div>
 </section>
+
 </div>
 </main>
 
 <footer>
 <div class="container">
-© 2026 Farhan Yanuar. Designed with purpose.
+© 2026 Farhan Yanuar · Personal Portfolio
 </div>
 </footer>
 
